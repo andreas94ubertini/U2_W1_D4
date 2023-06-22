@@ -26,12 +26,16 @@ main {
 @keyframes changeword1 {
   from {
     opacity: 0;
-    transform: translate(0, -10px);
   }
   5% {
+    transform: translate(0, -10px);
+    transition-timing-function: linear;
+    opacity: 0;
+  }
+  30% {
     opacity: 100;
   }
-  65% {
+  90% {
     opacity: 0;
   }
   100% {
@@ -41,12 +45,16 @@ main {
 @keyframes changeword2 {
   from {
     opacity: 0;
-    transform: translate(0, -10px);
   }
-  70% {
+  55% {
+    opacity: 0;
+    transform: translate(0, -10px);
+    transition-timing-function: linear;
+  }
+  65% {
     opacity: 100;
   }
-  95% {
+  85% {
     opacity: 0;
   }
 }
@@ -58,9 +66,11 @@ main {
     opacity: 0;
   }
   75% {
+    opacity: 0;
     transform: translate(0, -10px);
+    transition-timing-function: linear;
   }
-  100% {
+  90% {
     opacity: 100;
   }
 }
