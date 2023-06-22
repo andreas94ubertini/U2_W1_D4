@@ -1,0 +1,84 @@
+/*
+1 creazione del testo e formattazione di 1 parola da far ruotare
+2 inserimento delle altre 2 parole
+3 sovrapporre le 3 parole
+4 mostrare 1 parola e nascondere le altre 2
+5 animare 1 parola (fadein - fadeout con spostamento)
+6 animare le altre 2 parole
+7 ritardare progressivamente l'animazione delle altre 2 parole 
+*/
+main {
+  border: 3px solid grey;
+  display: flex;
+  align-items: center;
+  padding: 2rem;
+  font-size: 2rem;
+  width: 50%;
+  margin: 0 auto;
+  font-weight: bolder;
+}
+.parole {
+  color: rgb(10, 160, 220);
+}
+.parole i {
+  position: absolute;
+}
+@keyframes changeword1 {
+  from {
+    opacity: 0;
+    transform: translate(0, -10px);
+  }
+  45% {
+    opacity: 100;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes changeword2 {
+  from {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+    transform: translate(0, -10px);
+  }
+  60% {
+    opacity: 100;
+  }
+  90% {
+    opacity: 0;
+  }
+}
+@keyframes changeword3 {
+  from {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  75% {
+    transform: translate(0, -10px);
+  }
+  100% {
+    opacity: 100;
+  }
+}
+.parole i:nth-of-type(1) {
+  opacity: 0;
+  animation-name: changeword1;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+.parole i:nth-of-type(2) {
+  opacity: 0;
+  animation-name: changeword2;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+.parole i:nth-of-type(3) {
+  opacity: 0;
+  animation-name: changeword3;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
